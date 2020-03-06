@@ -32,6 +32,7 @@ public class MainWindow extends javax.swing.JFrame {
     private TreeMap <String, Champion> champs;
     public MainWindow() throws IOException {
         initComponents();
+        champs = new TreeMap<String, Champion>();
         String champList = "Aatrox Ahri Akali Alistar Amumu"
                 + " Anivia Annie Aphelios Ashe AurelionSol Azir Bard Blitzcrank Brand Braum"
                 + " Caitlyn Camille Cassiopeia Cho'Gath Corki Darius Diana Dr.Mundo"
@@ -335,7 +336,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         ChampRole.setText("Set this equal to the role");
 
-        ChampPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG"))); // NOI18N
         ChampPicture.setText("The picture of the champ");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -595,8 +595,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_ListOfChampionsActionPerformed
 
     private void ListOfChampionsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ListOfChampionsItemStateChanged
-        ChampSearchBar.setText((String)ListOfChampions.getSelectedItem());
-        
+        String selectedChamp = (String)ListOfChampions.getSelectedItem();
+        Champion selChamp = champs.get(selectedChamp);
+        ChampSearchBar.setText(selectedChamp);
+        ChampPicture.setIcon(selChamp.getSplashArt());
     }//GEN-LAST:event_ListOfChampionsItemStateChanged
 
     private void ChampSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChampSearchBarActionPerformed
@@ -645,23 +647,19 @@ public class MainWindow extends javax.swing.JFrame {
     }
     public void addChamps() throws IOException{
         champs.put("Aatrox", new Champion("Aatrox"));
+        
     }
     public ImageIcon setChampImg() throws IOException{
-        try {
+        try{
             return champs.get((String)ListOfChampions.getSelectedItem()).getSplashArt();
+        
         }
         catch (Exception ioe) {
-            ImageIcon i = new ImageIcon();
-            String imagePath = "ChampionSA/Aatrox.PNG";
-            InputStream imgStream = MainWindow.class.getResourceAsStream(imagePath);
-            BufferedImage myImg = ImageIO.read(imgStream);
-            //BufferedImage folderImage = ImageIO.read(imgStream);
-            i.setImage(myImg);
-            return i;
+            return new ImageIcon();
+            
         }
-        
-        
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BUILDlabel;

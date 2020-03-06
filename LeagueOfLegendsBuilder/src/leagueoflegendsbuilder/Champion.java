@@ -23,7 +23,7 @@ private ImageIcon splashArt;
     //public ArrayList<String> addSkills(){
         //will return the skill order of the champion in letters in the arrayList
    // }
-    public Champion(String n) throws IOException{
+    public Champion(String n) throws IOException {
         name = n;
         setSplashArt();
     }
@@ -36,9 +36,12 @@ private ImageIcon splashArt;
     }
 
     public void setSplashArt() throws IOException {
-        String imagePath = ("/U:/NetBeansProjects/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
+        splashArt = new ImageIcon("U:/NetBeansProjects/LeagueOfLegendsBuilder/LeagueBuilds-master/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
+        
+        /*String imagePath = ("/U:/NetBeansProjects/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
         InputStream imgStream = Champion.class.getResourceAsStream(imagePath);
-        BufferedImage myImg = ImageIO.read(imgStream);
-        splashArt.setImage(myImg);
+        BufferedImage myImg = ImageIO.read(imgStream);*/
+        //splashArt.setImage(myImg);
+        
     }
 }
