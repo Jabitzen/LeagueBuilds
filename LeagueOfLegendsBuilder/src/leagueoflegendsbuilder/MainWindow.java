@@ -1,5 +1,18 @@
 package leagueoflegendsbuilder;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,8 +28,33 @@ public class MainWindow extends javax.swing.JFrame {
     /**
      * Creates new form MainWindow
      */
-    public MainWindow() {
+    
+    private TreeMap <String, Champion> champs;
+    public MainWindow() throws IOException {
         initComponents();
+        String champList = "Aatrox Ahri Akali Alistar Amumu"
+                + " Anivia Annie Aphelios Ashe AurelionSol Azir Bard Blitzcrank Brand Braum"
+                + " Caitlyn Camille Cassiopeia Cho'Gath Corki Darius Diana Dr.Mundo"
+                + " Draven Ekko Elise Evelynn Ezreal Fiddlesticks Fiora Fizz Galio"
+                + " Gangplank Garen Gnar Gragas Graves Hecarim Heimerdinger Illaoi"
+                + " Irelia Ivern Janna JarvanIV Jax Jayce Jhin Jinx kai'sa Kalista Karma"
+                + " Karthus Kassadin Katarina Kayle Kayn Kennen Kha'Zix Kindred Kled"
+                + " Kog'Maw LeBlanc LeeSin Leona Lissandra Lucian Lulu Lux Malphite "
+                + "Malzahar Maokai MasterYi MissFortune Mordekaiser Morgana Nami"
+                + " Nasus Nautilus Neeko Nidalee Nocturne Nunu Olaf Orianna Ornn Pantheon"
+                + " Poppy Pyke Qiyana Quinn Rakan Rammus Rek'Sai Renekton Rengar Riven Rumble"
+                + " Ryze Sejuani Senna Sett Shaco Shen Shyvana Singed Sion Sivir Skarner Sona"
+                + " Soraka Swain Sylas Syndra TahmKench Tailyah Talon Taric Teemo Thresh"
+                + " Tristana Trundle Tryndamere TwistedFate Twitch Udyr Urgot Varus"
+                + " Vayne Veigar Vel'Koz Vi Viktor Vladimir Volibear Warwick Wukong"
+                + " Xayah Xerath XinZhao Yasuo Yorick Yuumi Zac Zed Ziggs Zilean Zoe Zyra";
+        Scanner champs = new Scanner(champList);
+        addChamps();
+        //while(champs.hasNext()){
+         //   ListOfChampions.addItem(champs.next());
+        //}
+        ListOfChampions.addItem("Aatrox");
+      
     }
 
     /**
@@ -32,16 +70,23 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        TeamCompPanel = new javax.swing.JPanel();
+        TeamCompBigBoiPanel = new javax.swing.JPanel();
+        CharacterComp = new javax.swing.JTabbedPane();
+        Character1 = new javax.swing.JPanel();
+        ChampName1 = new javax.swing.JLabel();
+        ChampRole1 = new javax.swing.JLabel();
+        ChampPicture1 = new javax.swing.JLabel();
+        Character2 = new javax.swing.JPanel();
+        ChampName2 = new javax.swing.JLabel();
+        ChampRole2 = new javax.swing.JLabel();
+        ChampPicture2 = new javax.swing.JLabel();
         IndividualInfoPanel = new javax.swing.JPanel();
         ChampSearchBar = new javax.swing.JTextField();
         EnterChampName = new javax.swing.JLabel();
         ListOfChampions = new javax.swing.JComboBox();
         ListOfChamp = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel6 = new javax.swing.JPanel();
-        ChampName = new javax.swing.JLabel();
-        ChampRole = new javax.swing.JLabel();
-        ChampPicture = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         SkillOrder = new javax.swing.JLabel();
         SkillTable = new javax.swing.JScrollPane();
@@ -50,9 +95,29 @@ public class MainWindow extends javax.swing.JFrame {
         WSkill = new javax.swing.JLabel();
         ESkill = new javax.swing.JLabel();
         RSkill = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        ChampName = new javax.swing.JLabel();
+        ChampRole = new javax.swing.JLabel();
+        ChampPicture = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         BuildPanel = new javax.swing.JPanel();
-        TeamCompPanel = new javax.swing.JPanel();
+        jSeparator2 = new javax.swing.JSeparator();
+        Rune_Panel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        subStat1 = new javax.swing.JLabel();
+        subStat2 = new javax.swing.JLabel();
+        subStat3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        subKey = new javax.swing.JLabel();
+        topSubKey = new javax.swing.JLabel();
+        botSubKey = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        MainKey = new javax.swing.JLabel();
+        topKey = new javax.swing.JLabel();
+        midKey = new javax.swing.JLabel();
+        botKey = new javax.swing.JLabel();
+        RUNElabel = new javax.swing.JLabel();
+        BUILDlabel = new javax.swing.JLabel();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -61,6 +126,106 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        ChampName1.setText("Set this equal to the champion name");
+
+        ChampRole1.setText("Set this equal to the role");
+
+        ChampPicture1.setText("The picture of the champ");
+
+        javax.swing.GroupLayout Character1Layout = new javax.swing.GroupLayout(Character1);
+        Character1.setLayout(Character1Layout);
+        Character1Layout.setHorizontalGroup(
+            Character1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Character1Layout.createSequentialGroup()
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addGroup(Character1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ChampRole1)
+                    .addComponent(ChampName1))
+                .addGap(155, 155, 155))
+            .addGroup(Character1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(ChampPicture1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Character1Layout.setVerticalGroup(
+            Character1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Character1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ChampName1)
+                .addGap(22, 22, 22)
+                .addComponent(ChampPicture1)
+                .addGap(27, 27, 27)
+                .addComponent(ChampRole1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        CharacterComp.addTab("                                 Character 1                                ", Character1);
+
+        ChampName2.setText("Set this equal to the champion name");
+
+        ChampRole2.setText("Set this equal to the role");
+
+        ChampPicture2.setText("The picture of the champ");
+
+        javax.swing.GroupLayout Character2Layout = new javax.swing.GroupLayout(Character2);
+        Character2.setLayout(Character2Layout);
+        Character2Layout.setHorizontalGroup(
+            Character2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Character2Layout.createSequentialGroup()
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addGroup(Character2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ChampRole2)
+                    .addComponent(ChampName2))
+                .addGap(155, 155, 155))
+            .addGroup(Character2Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(ChampPicture2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Character2Layout.setVerticalGroup(
+            Character2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Character2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ChampName2)
+                .addGap(22, 22, 22)
+                .addComponent(ChampPicture2)
+                .addGap(27, 27, 27)
+                .addComponent(ChampRole2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        CharacterComp.addTab("                                   Character 2                                ", Character2);
+
+        javax.swing.GroupLayout TeamCompBigBoiPanelLayout = new javax.swing.GroupLayout(TeamCompBigBoiPanel);
+        TeamCompBigBoiPanel.setLayout(TeamCompBigBoiPanelLayout);
+        TeamCompBigBoiPanelLayout.setHorizontalGroup(
+            TeamCompBigBoiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(CharacterComp, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+        TeamCompBigBoiPanelLayout.setVerticalGroup(
+            TeamCompBigBoiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CharacterComp, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(630, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout TeamCompPanelLayout = new javax.swing.GroupLayout(TeamCompPanel);
+        TeamCompPanel.setLayout(TeamCompPanelLayout);
+        TeamCompPanelLayout.setHorizontalGroup(
+            TeamCompPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TeamCompBigBoiPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        TeamCompPanelLayout.setVerticalGroup(
+            TeamCompPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(TeamCompBigBoiPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("                               Team Comparision                            ", TeamCompPanel);
 
         ChampSearchBar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,42 +240,18 @@ public class MainWindow extends javax.swing.JFrame {
 
         EnterChampName.setText("Enter Champion Name:");
 
+        ListOfChampions.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ListOfChampionsItemStateChanged(evt);
+            }
+        });
+        ListOfChampions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListOfChampionsActionPerformed(evt);
+            }
+        });
+
         ListOfChamp.setText("List Of Campions");
-
-        ChampName.setText("Set this equal to the champion name");
-
-        ChampRole.setText("Set this equal to the role");
-
-        ChampPicture.setText("The picture of the champ");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(204, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ChampRole)
-                    .addComponent(ChampName))
-                .addGap(155, 155, 155))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(ChampPicture)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ChampName)
-                .addGap(22, 22, 22)
-                .addComponent(ChampPicture)
-                .addGap(27, 27, 27)
-                .addComponent(ChampRole)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("                                 Basic Info                                 ", jPanel6);
 
         SkillOrder.setText("Skill order");
 
@@ -179,7 +320,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(SkillOrder)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(QSkill)
                     .addComponent(WSkill)
@@ -188,7 +329,42 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jTabbedPane2.addTab("                                   Skills Info                                   ", jPanel5);
+        jTabbedPane2.addTab("                                        Skills Info", jPanel5);
+
+        ChampName.setText("Set this equal to the champion name");
+
+        ChampRole.setText("Set this equal to the role");
+
+        ChampPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG"))); // NOI18N
+        ChampPicture.setText("The picture of the champ");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ChampRole)
+                    .addComponent(ChampName))
+                .addGap(155, 155, 155))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ChampName))
+                    .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(ChampRole)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Basic Info                                      ", jPanel6);
 
         javax.swing.GroupLayout BuildPanelLayout = new javax.swing.GroupLayout(BuildPanel);
         BuildPanel.setLayout(BuildPanelLayout);
@@ -198,32 +374,173 @@ public class MainWindow extends javax.swing.JFrame {
         );
         BuildPanelLayout.setVerticalGroup(
             BuildPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 287, Short.MAX_VALUE)
+            .addGap(0, 194, Short.MAX_VALUE)
         );
+
+        subStat1.setText("sub stat 1");
+
+        subStat2.setText("sub stat 2");
+
+        subStat3.setText("sub stat 3");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(subStat3)
+                    .addComponent(subStat2)
+                    .addComponent(subStat1))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(subStat1)
+                .addGap(27, 27, 27)
+                .addComponent(subStat2)
+                .addGap(38, 38, 38)
+                .addComponent(subStat3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        subKey.setText("Secondary");
+
+        topSubKey.setText("top sub");
+
+        botSubKey.setText("bot sub");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(subKey)
+                        .addGap(60, 60, 60))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botSubKey)
+                            .addComponent(topSubKey))
+                        .addGap(69, 69, 69))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(subKey)
+                .addGap(27, 27, 27)
+                .addComponent(topSubKey)
+                .addGap(33, 33, 33)
+                .addComponent(botSubKey)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        MainKey.setText("Main KeyStone");
+
+        topKey.setText("top sub");
+
+        midKey.setText("mid sub");
+
+        botKey.setText("bot sub");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(MainKey))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botKey)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(midKey)
+                                .addComponent(topKey)))))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(MainKey)
+                .addGap(29, 29, 29)
+                .addComponent(topKey)
+                .addGap(31, 31, 31)
+                .addComponent(midKey)
+                .addGap(29, 29, 29)
+                .addComponent(botKey)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        RUNElabel.setText("RUNES");
+
+        javax.swing.GroupLayout Rune_PanelLayout = new javax.swing.GroupLayout(Rune_Panel);
+        Rune_Panel.setLayout(Rune_PanelLayout);
+        Rune_PanelLayout.setHorizontalGroup(
+            Rune_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Rune_PanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RUNElabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        Rune_PanelLayout.setVerticalGroup(
+            Rune_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(Rune_PanelLayout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(RUNElabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        BUILDlabel.setText("BUILD");
 
         javax.swing.GroupLayout IndividualInfoPanelLayout = new javax.swing.GroupLayout(IndividualInfoPanel);
         IndividualInfoPanel.setLayout(IndividualInfoPanelLayout);
         IndividualInfoPanelLayout.setHorizontalGroup(
             IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(ListOfChamp)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(EnterChampName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ChampSearchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 91, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
                 .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
-                            .addComponent(jSeparator1)
-                            .addContainerGap())
-                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(ListOfChamp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(EnterChampName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ChampSearchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Rune_Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(BUILDlabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10))
+                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         IndividualInfoPanelLayout.setVerticalGroup(
             IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,28 +552,25 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ListOfChamp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Rune_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(BUILDlabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jTabbedPane1.addTab("                              Individual Inforamtion                                    ", IndividualInfoPanel);
-
-        javax.swing.GroupLayout TeamCompPanelLayout = new javax.swing.GroupLayout(TeamCompPanel);
-        TeamCompPanel.setLayout(TeamCompPanelLayout);
-        TeamCompPanelLayout.setHorizontalGroup(
-            TeamCompPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 613, Short.MAX_VALUE)
-        );
-        TeamCompPanelLayout.setVerticalGroup(
-            TeamCompPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 778, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("                                Team Comparision                              ", TeamCompPanel);
+        jTabbedPane1.addTab("                            Individual Inforamtion                                  ", IndividualInfoPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,13 +586,22 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ChampSearchBarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChampSearchBarKeyPressed
+        
+    }//GEN-LAST:event_ChampSearchBarKeyPressed
+
+    private void ListOfChampionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListOfChampionsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ListOfChampionsActionPerformed
+
+    private void ListOfChampionsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ListOfChampionsItemStateChanged
+        ChampSearchBar.setText((String)ListOfChampions.getSelectedItem());
+        
+    }//GEN-LAST:event_ListOfChampionsItemStateChanged
+
     private void ChampSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChampSearchBarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ChampSearchBarActionPerformed
-
-    private void ChampSearchBarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChampSearchBarKeyPressed
-        String text = textField.getText();
-    }//GEN-LAST:event_ChampSearchBarKeyPressed
 
     /**
      * @param args the command line arguments
@@ -310,36 +633,88 @@ public class MainWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainWindow().setVisible(true);
+                
+                try {
+                    new MainWindow().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
             }
         });
     }
+    public void addChamps() throws IOException{
+        champs.put("Aatrox", new Champion("Aatrox"));
+    }
+    public ImageIcon setChampImg() throws IOException{
+        try {
+            return champs.get((String)ListOfChampions.getSelectedItem()).getSplashArt();
+        }
+        catch (Exception ioe) {
+            ImageIcon i = new ImageIcon();
+            String imagePath = "ChampionSA/Aatrox.PNG";
+            InputStream imgStream = MainWindow.class.getResourceAsStream(imagePath);
+            BufferedImage myImg = ImageIO.read(imgStream);
+            //BufferedImage folderImage = ImageIO.read(imgStream);
+            i.setImage(myImg);
+            return i;
+        }
+        
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BUILDlabel;
     private javax.swing.JPanel BuildPanel;
     private javax.swing.JLabel ChampName;
+    private javax.swing.JLabel ChampName1;
+    private javax.swing.JLabel ChampName2;
     private javax.swing.JLabel ChampPicture;
+    private javax.swing.JLabel ChampPicture1;
+    private javax.swing.JLabel ChampPicture2;
     private javax.swing.JLabel ChampRole;
+    private javax.swing.JLabel ChampRole1;
+    private javax.swing.JLabel ChampRole2;
     private javax.swing.JTextField ChampSearchBar;
+    private javax.swing.JPanel Character1;
+    private javax.swing.JPanel Character2;
+    private javax.swing.JTabbedPane CharacterComp;
     private javax.swing.JLabel ESkill;
     private javax.swing.JLabel EnterChampName;
     private javax.swing.JPanel IndividualInfoPanel;
     private javax.swing.JLabel ListOfChamp;
     private javax.swing.JComboBox ListOfChampions;
+    private javax.swing.JLabel MainKey;
     private javax.swing.JLabel QSkill;
     private javax.swing.JLabel RSkill;
+    private javax.swing.JLabel RUNElabel;
+    private javax.swing.JPanel Rune_Panel;
     private javax.swing.JLabel SkillOrder;
     private javax.swing.JScrollPane SkillTable;
+    private javax.swing.JPanel TeamCompBigBoiPanel;
     private javax.swing.JPanel TeamCompPanel;
     private javax.swing.JLabel WSkill;
+    private javax.swing.JLabel botKey;
+    private javax.swing.JLabel botSubKey;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel midKey;
+    private javax.swing.JLabel subKey;
+    private javax.swing.JLabel subStat1;
+    private javax.swing.JLabel subStat2;
+    private javax.swing.JLabel subStat3;
+    private javax.swing.JLabel topKey;
+    private javax.swing.JLabel topSubKey;
     // End of variables declaration//GEN-END:variables
 }
