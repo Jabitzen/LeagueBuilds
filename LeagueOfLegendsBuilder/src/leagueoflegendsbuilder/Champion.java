@@ -20,16 +20,19 @@ import javax.swing.ImageIcon;
 public class Champion {
 private String name;
 private ImageIcon splashArt; 
+private ImageIcon skillOrder;
     //public ArrayList<String> addSkills(){
         //will return the skill order of the champion in letters in the arrayList
    // }
     public Champion(){
         name = null;
-        splashArt = null;          
+        splashArt = null;    
+        skillOrder = null;
     }
     public Champion(String n) throws IOException {
         name = n;
         setSplashArt();
+        setSkillOrder();
     }
     public void setName(String name){
         this.name = name;
@@ -47,7 +50,13 @@ private ImageIcon splashArt;
         //splashArt.setImage(myImg);
         
     }
-    public void loadSkillOrder(){
-        
+
+    public ImageIcon getSkillOrder() {
+        return skillOrder;
     }
+
+    public void setSkillOrder() {
+        skillOrder = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/SkillOrder/"+ name +".JPG");
+    }
+   
 }

@@ -95,9 +95,7 @@ public class MainWindow extends javax.swing.JFrame {
         midKey = new javax.swing.JLabel();
         botKey = new javax.swing.JLabel();
         RUNElabel = new javax.swing.JLabel();
-        SkillTable1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        SkillOrder1 = new javax.swing.JLabel();
+        SkillOrder = new javax.swing.JLabel();
         RSkill1 = new javax.swing.JLabel();
         ESkill1 = new javax.swing.JLabel();
         QSkill1 = new javax.swing.JLabel();
@@ -322,33 +320,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false, false, true, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable2.setRowHeight(30);
-        SkillTable1.setViewportView(jTable2);
-
-        SkillOrder1.setText("Skill order");
+        SkillOrder.setText("Skill order");
 
         RSkill1.setText("R Skill");
 
@@ -374,23 +346,21 @@ public class MainWindow extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(Rune_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(SkillOrder1)
-                                .addGap(102, 102, 102)
-                                .addComponent(SkillTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(Rune_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(QSkill1)
+                        .addGap(29, 29, 29)
+                        .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SkillOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                                .addComponent(WSkill1)
+                                .addGap(28, 28, 28)
+                                .addComponent(ESkill1)
+                                .addGap(30, 30, 30)
+                                .addComponent(RSkill1)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(QSkill1)
-                .addGap(29, 29, 29)
-                .addComponent(WSkill1)
-                .addGap(28, 28, 28)
-                .addComponent(ESkill1)
-                .addGap(30, 30, 30)
-                .addComponent(RSkill1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         IndividualInfoPanelLayout.setVerticalGroup(
             IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,17 +371,14 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ListOfChamp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(SkillOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SkillTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
-                        .addComponent(SkillOrder1)
-                        .addGap(78, 78, 78)
-                        .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(QSkill1)
-                            .addComponent(WSkill1)
-                            .addComponent(ESkill1)
-                            .addComponent(RSkill1))))
+                .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(QSkill1)
+                    .addComponent(WSkill1)
+                    .addComponent(ESkill1)
+                    .addComponent(RSkill1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Rune_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -502,7 +469,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(CharacterComp, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(862, Short.MAX_VALUE))
+                .addContainerGap(944, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout TeamCompPanelLayout = new javax.swing.GroupLayout(TeamCompPanel);
@@ -542,6 +509,7 @@ public class MainWindow extends javax.swing.JFrame {
         Champion selChamp = champs.get(selectedChamp);
         if(selChamp != null){
             ChampPicture.setIcon(selChamp.getSplashArt());
+            SkillOrder.setIcon(selChamp.getSkillOrder());
         }
         else{
             ChampPicture.setIcon(new ImageIcon ("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/NoChamp.PNG"));
@@ -633,8 +601,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel RSkill1;
     private javax.swing.JLabel RUNElabel;
     private javax.swing.JPanel Rune_Panel;
-    private javax.swing.JLabel SkillOrder1;
-    private javax.swing.JScrollPane SkillTable1;
+    private javax.swing.JLabel SkillOrder;
     private javax.swing.JPanel TeamCompBigBoiPanel;
     private javax.swing.JPanel TeamCompPanel;
     private javax.swing.JLabel WSkill1;
@@ -650,7 +617,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable2;
     private javax.swing.JLabel midKey;
     private javax.swing.JLabel subKey;
     private javax.swing.JLabel subStat1;
