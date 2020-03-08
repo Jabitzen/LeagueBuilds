@@ -47,4 +47,7 @@ private ImageIcon splashArt;
         //splashArt.setImage(myImg);
         
     }
+    public void loadSkillOrder(){
+        
+    }
 }
