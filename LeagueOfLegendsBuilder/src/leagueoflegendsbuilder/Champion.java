@@ -23,6 +23,10 @@ private ImageIcon splashArt;
     //public ArrayList<String> addSkills(){
         //will return the skill order of the champion in letters in the arrayList
    // }
+    public Champion(){
+        name = null;
+        splashArt = null;          
+    }
     public Champion(String n) throws IOException {
         name = n;
         setSplashArt();
@@ -30,13 +34,12 @@ private ImageIcon splashArt;
     public void setName(String name){
         this.name = name;
     }
-
     public ImageIcon getSplashArt() {
         return splashArt;
     }
-
     public void setSplashArt() throws IOException {
-        splashArt = new ImageIcon("U:/NetBeansProjects/LeagueOfLegendsBuilder/LeagueBuilds-master/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
+        
+        splashArt = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Icon/Ahri.jpg");
         
         /*String imagePath = ("/U:/NetBeansProjects/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
         InputStream imgStream = Champion.class.getResourceAsStream(imagePath);
