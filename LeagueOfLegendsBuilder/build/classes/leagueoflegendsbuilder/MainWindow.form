@@ -72,28 +72,24 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                              <Component id="ListOfChamp" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="ListOfChampions" min="-2" pref="193" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="EnterChampName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="ChampSearchBar" min="-2" pref="231" max="-2" attributes="0"/>
+                              <Component id="ListOfChamp" min="-2" pref="106" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="ListOfChampions" min="-2" pref="374" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTabbedPane2" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Rune_Panel" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="SkillOrder1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="SkillTable1" min="-2" pref="475" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTabbedPane2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="Rune_Panel" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="SkillOrder1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                                      <Component id="SkillTable1" min="-2" pref="475" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -116,10 +112,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ChampSearchBar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="EnterChampName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ListOfChampions" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ListOfChamp" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ListOfChamp" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jTabbedPane2" min="-2" pref="646" max="-2" attributes="0"/>
@@ -144,17 +138,6 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="ChampSearchBar">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChampSearchBarActionPerformed"/>
-                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ChampSearchBarKeyPressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="EnterChampName">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Enter Champion Name:"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JComboBox" name="ListOfChampions">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">

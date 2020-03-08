@@ -44,7 +44,6 @@ public class MainWindow extends javax.swing.JFrame {
                 + " Tristana Trundle Tryndamere TwistedFate Twitch Udyr Urgot Varus"
                 + " Vayne Veigar Vel'Koz Vi Viktor Vladimir Volibear Warwick Wukong"
                 + " Xayah Xerath XinZhao Yasuo Yorick Yuumi Zac Zed Ziggs Zilean Zoe Zyra";
-        
     private TreeMap <String, Champion> champs;
     public MainWindow() throws IOException {
         
@@ -58,7 +57,6 @@ public class MainWindow extends javax.swing.JFrame {
            ListOfChampions.addItem(allChamps.next());
         }   
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -73,8 +71,6 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         IndividualInfoPanel = new javax.swing.JPanel();
-        ChampSearchBar = new javax.swing.JTextField();
-        EnterChampName = new javax.swing.JLabel();
         ListOfChampions = new javax.swing.JComboBox();
         ListOfChamp = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -125,19 +121,6 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        ChampSearchBar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChampSearchBarActionPerformed(evt);
-            }
-        });
-        ChampSearchBar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                ChampSearchBarKeyPressed(evt);
-            }
-        });
-
-        EnterChampName.setText("Enter Champion Name:");
 
         ListOfChampions.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -383,25 +366,21 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
                 .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(ListOfChamp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(EnterChampName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ChampSearchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Rune_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SkillOrder1)
-                        .addGap(102, 102, 102)
-                        .addComponent(SkillTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ListOfChamp, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
+                        .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))
+                    .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(Rune_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IndividualInfoPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(SkillOrder1)
+                                .addGap(102, 102, 102)
+                                .addComponent(SkillTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
             .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
@@ -419,10 +398,8 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(IndividualInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ChampSearchBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EnterChampName)
                     .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ListOfChamp))
+                    .addComponent(ListOfChamp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -556,10 +533,6 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ChampSearchBarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ChampSearchBarKeyPressed
-        
-    }//GEN-LAST:event_ChampSearchBarKeyPressed
-
     private void ListOfChampionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListOfChampionsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ListOfChampionsActionPerformed
@@ -569,7 +542,6 @@ public class MainWindow extends javax.swing.JFrame {
         String selectedChamp = (String)ListOfChampions.getSelectedItem();
         Champion selChamp = champs.get(selectedChamp);
         if(selChamp != null){
-            ChampSearchBar.setText(selectedChamp);
             ChampPicture.setIcon(selChamp.getSplashArt());
         }
         else{
@@ -577,10 +549,6 @@ public class MainWindow extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_ListOfChampionsItemStateChanged
-
-    private void ChampSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChampSearchBarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ChampSearchBarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -654,12 +622,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel ChampRole;
     private javax.swing.JLabel ChampRole1;
     private javax.swing.JLabel ChampRole2;
-    private javax.swing.JTextField ChampSearchBar;
     private javax.swing.JPanel Character1;
     private javax.swing.JPanel Character2;
     private javax.swing.JTabbedPane CharacterComp;
     private javax.swing.JLabel ESkill1;
-    private javax.swing.JLabel EnterChampName;
     private javax.swing.JPanel IndividualInfoPanel;
     private javax.swing.JLabel ListOfChamp;
     private javax.swing.JComboBox ListOfChampions;
