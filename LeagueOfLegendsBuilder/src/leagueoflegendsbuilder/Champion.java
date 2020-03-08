@@ -39,7 +39,7 @@ private ImageIcon splashArt;
     }
     public void setSplashArt() throws IOException {
         
-        splashArt = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Icon/Ahri.jpg");
+        splashArt = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Icon/"+ name + ".jpg");
         
         /*String imagePath = ("/U:/NetBeansProjects/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
         InputStream imgStream = Champion.class.getResourceAsStream(imagePath);

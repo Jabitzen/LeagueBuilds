@@ -173,16 +173,16 @@ public class MainWindow extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
+                        .addGap(216, 216, 216)
                         .addComponent(BUILDlabel))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(444, 444, 444)
+                        .addGap(466, 466, 466)
                         .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                        .addGap(94, 94, 94)
                         .addComponent(ChampRole, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -190,17 +190,20 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
                         .addComponent(ChampRole, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(BUILDlabel)
                         .addGap(18, 18, 18)
-                        .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BuildPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ChampPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addContainerGap())
         );
 
         jTabbedPane2.addTab("                                                                                                          Basic Info                                                                                                                     ", jPanel6);
@@ -421,7 +424,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ListOfChamp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(IndividualInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SkillTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -433,7 +436,7 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(WSkill1)
                             .addComponent(ESkill1)
                             .addComponent(RSkill1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Rune_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -523,7 +526,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(CharacterComp, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(845, Short.MAX_VALUE))
+                .addContainerGap(862, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout TeamCompPanelLayout = new javax.swing.GroupLayout(TeamCompPanel);
@@ -562,10 +565,17 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_ListOfChampionsActionPerformed
 
     private void ListOfChampionsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ListOfChampionsItemStateChanged
+        
         String selectedChamp = (String)ListOfChampions.getSelectedItem();
         Champion selChamp = champs.get(selectedChamp);
-        ChampSearchBar.setText(selectedChamp);
-        ChampPicture.setIcon(selChamp.getSplashArt());
+        if(selChamp != null){
+            ChampSearchBar.setText(selectedChamp);
+            ChampPicture.setIcon(selChamp.getSplashArt());
+        }
+        else{
+            ChampPicture.setIcon(new ImageIcon ("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/NoChamp.PNG"));
+        }
+        
     }//GEN-LAST:event_ListOfChampionsItemStateChanged
 
     private void ChampSearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChampSearchBarActionPerformed
