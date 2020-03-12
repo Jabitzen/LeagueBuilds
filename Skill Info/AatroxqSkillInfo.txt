@@ -1,0 +1,25 @@
+Aatrox information: 
+
+ACTIVE: Aatrox swings his greatsword in the target direction,
+ striking all enemies in a line, dealing them physical damage.
+ Enemies hit by the far end are dealt 50% bonus damage and Airborne
+ icon knocked up for 0.25 seconds. The Darkin Blade can then be
+ reactivated twice within 4 seconds, with each cast refreshing the
+ timer. There's a 1 second cooldown between each cast.
+PHYSICAL DAMAGE
+
+10 / 30 / 50 / 70 / 90 (+ 60 / 65 / 70 / 75 / 80% AD)
+
+FIRST RECAST: Aatrox strikes all enemies in a cone, dealing them
+ 125% of the first strike's physical damage. Enemies hit by the
+ far end are dealt 50% bonus damage and Airborne icon knocked up
+ for 0.25 seconds.
+PHYSICAL DAMAGE
+
+12.5 / 37.5 / 62.5 / 87.5 / 112.5 (+ 75 / 81.25 / 87.5 / 93.75 / 100% AD)
+
+
+SECOND RECAST: Aatrox strikes all enemies in a circle, dealing
+ them 150% of the first strike's physical damage. Enemies hit
+ by the center are dealt 50% bonus damage and Airborne icon knocked
+ up for 0.25 seconds.
