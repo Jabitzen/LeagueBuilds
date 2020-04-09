@@ -57,11 +57,251 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
+        <Container class="javax.swing.JPanel" name="TeamCompPanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="                                              Your Information                                            ">
+                <Property name="tabTitle" type="java.lang.String" value="                                              Your Information                                            "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="TeamCompBigBoiPanel" alignment="1" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="TeamCompBigBoiPanel" alignment="1" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="TeamCompBigBoiPanel">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="487" max="32767" attributes="0"/>
+                          <Component id="ListOfChampions" min="-2" pref="374" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Component id="IndividualInfoPanel1" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="ListOfChampions" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="927" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="IndividualInfoPanel1" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="IndividualInfoPanel1">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTabbedPane3" min="-2" pref="870" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                                      <Component id="ListOfChamp" min="-2" pref="106" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="SkillOrder" alignment="0" min="-2" pref="631" max="-2" attributes="0"/>
+                                          <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Picture" pref="232" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="12" pref="12" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="ListOfChamp" min="-2" pref="27" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTabbedPane3" min="-2" pref="592" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="SkillOrder" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jPanel1" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                      <Component id="Picture" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ListOfChamp">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="List Of Champions"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JTabbedPane" name="jTabbedPane3">
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="jPanel7">
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                              <JTabbedPaneConstraints tabName="                                                                                                          Basic Info                                                                                                                     ">
+                                <Property name="tabTitle" type="java.lang.String" value="                                                                                                          Basic Info                                                                                                                     "/>
+                              </JTabbedPaneConstraints>
+                            </Constraint>
+                          </Constraints>
+
+                          <Layout>
+                            <DimensionLayout dim="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="ChampPicture" min="-2" pref="308" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="Runes" pref="521" max="32767" attributes="0"/>
+                                          <Component id="Build" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="BuildPanel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                            <DimensionLayout dim="1">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                                              <Component id="BuildPanel1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="ChampPicture" alignment="0" min="-2" pref="560" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Runes" min="-2" pref="358" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="Build" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                          </Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="Runes">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Set this equal to the role"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="ChampPicture">
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="Build">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="BUILD"/>
+                              </Properties>
+                            </Component>
+                            <Container class="javax.swing.JPanel" name="BuildPanel1">
+
+                              <Layout>
+                                <DimensionLayout dim="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                                <DimensionLayout dim="1">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="385" max="32767" attributes="0"/>
+                                  </Group>
+                                </DimensionLayout>
+                              </Layout>
+                            </Container>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="SkillOrder">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Picture">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="jLabel1"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PictureMouseEntered"/>
+                        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PictureMouseExited"/>
+                      </Events>
+                    </Component>
+                    <Container class="javax.swing.JPanel" name="jPanel1">
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="245" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JComboBox" name="ListOfChampions">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ListOfChampionsItemStateChanged"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListOfChampionsActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
         <Container class="javax.swing.JPanel" name="IndividualInfoPanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="                                   Individual Inforamtion                                         ">
-                <Property name="tabTitle" type="java.lang.String" value="                                   Individual Inforamtion                                         "/>
+              <JTabbedPaneConstraints tabName="                                   Opponent Inforamtion                                         ">
+                <Property name="tabTitle" type="java.lang.String" value="                                   Opponent Inforamtion                                         "/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -73,33 +313,19 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="ListOfChamp" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="OListOfChamp" min="-2" pref="106" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                              <Component id="ListOfChampions" min="-2" pref="374" max="-2" attributes="0"/>
+                              <Component id="OListOfChampions" min="-2" pref="374" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTabbedPane2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="Rune_Panel" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jTabbedPane2" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="QSkill1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="SkillOrder" alignment="0" min="-2" pref="631" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="WSkill1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="ESkill1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="RSkill1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="OSkillOrder" min="-2" pref="631" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="152" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -111,41 +337,32 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ListOfChampions" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ListOfChamp" alignment="3" max="32767" attributes="0"/>
+                          <Component id="OListOfChampions" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="OListOfChamp" alignment="3" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jTabbedPane2" min="-2" pref="646" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="SkillOrder" min="-2" pref="163" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="QSkill1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="WSkill1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ESkill1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="RSkill1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="Rune_Panel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="OSkillOrder" min="-2" pref="163" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JComboBox" name="ListOfChampions">
+            <Component class="javax.swing.JComboBox" name="OListOfChampions">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ListOfChampionsItemStateChanged"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListOfChampionsActionPerformed"/>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="OListOfChampionsItemStateChanged"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OListOfChampionsActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="ListOfChamp">
+            <Component class="javax.swing.JLabel" name="OListOfChamp">
               <Properties>
-                <Property name="text" type="java.lang.String" value="List Of Campions"/>
+                <Property name="text" type="java.lang.String" value="List Of Champions"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
@@ -166,19 +383,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ChampPicture" min="-2" pref="308" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="BUILDlabel" min="-2" pref="408" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                      <Component id="BuildPanel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                      <Component id="ChampRole" min="-2" pref="213" max="-2" attributes="0"/>
-                                  </Group>
+                              <Component id="OChampPicture" min="-2" pref="308" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="OBuild" pref="408" max="32767" attributes="0"/>
+                                  <Component id="ORunes" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              <Component id="BuildPanel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
@@ -187,19 +399,17 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Component id="ChampRole" min="-2" pref="67" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="BuildPanel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="BUILDlabel" min="-2" pref="450" max="-2" attributes="0"/>
-                                      </Group>
+                                      <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                                      <Component id="BuildPanel" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="OChampPicture" alignment="0" min="-2" pref="560" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="ChampPicture" min="-2" pref="560" max="-2" attributes="0"/>
+                                      <Component id="ORunes" min="-2" pref="280" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="OBuild" min="-2" pref="257" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -210,14 +420,14 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="ChampRole">
+                    <Component class="javax.swing.JLabel" name="ORunes">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Set this equal to the role"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="ChampPicture">
+                    <Component class="javax.swing.JLabel" name="OChampPicture">
                     </Component>
-                    <Component class="javax.swing.JLabel" name="BUILDlabel">
+                    <Component class="javax.swing.JLabel" name="OBuild">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="BUILD"/>
                       </Properties>
@@ -243,411 +453,11 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="Rune_Panel">
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="112" max="32767" attributes="0"/>
-                          <Component id="RUNElabel" min="-2" pref="44" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel3" max="32767" attributes="0"/>
-                      <Component id="jPanel2" max="32767" attributes="0"/>
-                      <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                          <Component id="RUNElabel" min="-2" pref="56" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Container class="javax.swing.JPanel" name="jPanel1">
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subStat3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="subStat2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="subStat1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="51" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="subStat1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="subStat2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="subStat3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="subStat1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="sub stat 1"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="subStat2">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="sub stat 2"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="subStat3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="sub stat 3"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanel2">
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace pref="66" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="subKey" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="botSubKey" min="-2" max="-2" attributes="0"/>
-                                          <Component id="topSubKey" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="subKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="topSubKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="botSubKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="subKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Secondary"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="topSubKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="top sub"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="botSubKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="bot sub"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanel3">
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                      <Component id="MainKey" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="botKey" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="midKey" min="-2" max="-2" attributes="0"/>
-                                              <Component id="topKey" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="52" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="MainKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="topKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="midKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="botKey" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="40" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="MainKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Main KeyStone"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="topKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="top sub"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="midKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="mid sub"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="botKey">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="bot sub"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JLabel" name="RUNElabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="RUNES"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="SkillOrder">
+            <Component class="javax.swing.JLabel" name="OSkillOrder">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Skill order"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="RSkill1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="R Skill"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="ESkill1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="E Skill"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="QSkill1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Q Skill"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="WSkill1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="W Skill"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="TeamCompPanel">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="                                              Comparision                                            ">
-                <Property name="tabTitle" type="java.lang.String" value="                                              Comparision                                            "/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TeamCompBigBoiPanel" alignment="1" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TeamCompBigBoiPanel" alignment="1" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="TeamCompBigBoiPanel">
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="CharacterComp" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="CharacterComp" min="-2" pref="159" max="-2" attributes="0"/>
-                          <EmptySpace pref="944" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Container class="javax.swing.JTabbedPane" name="CharacterComp">
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
-                  <SubComponents>
-                    <Container class="javax.swing.JPanel" name="Character1">
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="                         Character 1                        ">
-                            <Property name="tabTitle" type="java.lang.String" value="                         Character 1                        "/>
-                          </JTabbedPaneConstraints>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="347" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="ChampRole1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="ChampName1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="ChampPicture1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="ChampName1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="ChampPicture1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="ChampRole1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="ChampName1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Set this equal to the champion name"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="ChampRole1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Set this equal to the role"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="ChampPicture1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="The picture of the champ"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
-                    <Container class="javax.swing.JPanel" name="Character2">
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                          <JTabbedPaneConstraints tabName="                          Character 2                        ">
-                            <Property name="tabTitle" type="java.lang.String" value="                          Character 2                        "/>
-                          </JTabbedPaneConstraints>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="347" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="ChampRole2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="ChampName2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="ChampPicture2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="ChampName2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="ChampPicture2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="ChampRole2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="ChampName2">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Set this equal to the champion name"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="ChampRole2">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Set this equal to the role"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="ChampPicture2">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="The picture of the champ"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
-                  </SubComponents>
-                </Container>
-              </SubComponents>
-            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

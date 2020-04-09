@@ -21,6 +21,13 @@ public class Champion {
 private String name;
 private ImageIcon splashArt; 
 private ImageIcon skillOrder;
+private ImageIcon runes;
+private ImageIcon builds;
+private ImageIcon skills;
+private ImageIcon q;
+private ImageIcon w;
+private ImageIcon e;
+private ImageIcon r;
     //public ArrayList<String> addSkills(){
         //will return the skill order of the champion in letters in the arrayList
    // }
@@ -28,11 +35,21 @@ private ImageIcon skillOrder;
         name = null;
         splashArt = null;    
         skillOrder = null;
+        runes = null;
+        builds = null;
+        q = null;
+        w= null;
+        e= null;
+        r= null;
+        
     }
     public Champion(String n) throws IOException {
         name = n;
         setSplashArt();
         setSkillOrder();
+        setRunes();
+        setBuild();
+        
     }
     public void setName(String name){
         this.name = name;
@@ -58,5 +75,50 @@ private ImageIcon skillOrder;
     public void setSkillOrder() {
         skillOrder = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/SkillOrder/"+ name +".JPG");
     }
+    public void setRunes(){
+        runes = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Runes/"+ name + ".JPG");
+    }
+    public ImageIcon getRunes(){
+        return runes;
+    }
+    public void setBuild(){
+        builds = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Builds/"+ name + ".JPG");
+    }
+    public ImageIcon getBuild(){
+        return builds;
+    }
+
+    public ImageIcon getQ() {
+        return q;
+    }
+
+    public void setQ() {
+        
+    }
+
+    public ImageIcon getW() {
+        return w;
+    }
+
+    public void setW() {
+       
+    }
+
+    public ImageIcon getE() {
+        return e;
+    }
+
+    public void setE() {
+        e = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "E.png");
+    }
+
+    public ImageIcon getR() {
+        return r;
+    }
+
+    public void setR() {
+        
+    }
+    
    
 }
