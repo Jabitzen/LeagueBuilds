@@ -5,17 +5,8 @@
  */
 package leagueoflegendsbuilder;
 
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-
-/**
- *
- * @author hooten_866875
- */
 
 public class Champion {
 private String name;
@@ -49,7 +40,10 @@ private ImageIcon r;
         setSkillOrder();
         setRunes();
         setBuild();
-        
+        setQ();
+        setW();
+        setE();
+        setR();
     }
     public void setName(String name){
         this.name = name;
@@ -67,11 +61,9 @@ private ImageIcon r;
         //splashArt.setImage(myImg);
         
     }
-
     public ImageIcon getSkillOrder() {
         return skillOrder;
     }
-
     public void setSkillOrder() {
         skillOrder = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/SkillOrder/"+ name +".JPG");
     }
@@ -87,21 +79,18 @@ private ImageIcon r;
     public ImageIcon getBuild(){
         return builds;
     }
-
     public ImageIcon getQ() {
         return q;
     }
-
     public void setQ() {
-        
+        q = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "Q.png");
     }
-
     public ImageIcon getW() {
         return w;
     }
 
     public void setW() {
-       
+       w = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "W.png");
     }
 
     public ImageIcon getE() {
@@ -117,7 +106,7 @@ private ImageIcon r;
     }
 
     public void setR() {
-        
+        r = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "R.png");
     }
     
    
