@@ -58,8 +58,7 @@ private ImageIcon r;
         /*String imagePath = ("/U:/NetBeansProjects/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/Aatrox.PNG");
         InputStream imgStream = Champion.class.getResourceAsStream(imagePath);
         BufferedImage myImg = ImageIO.read(imgStream);*/
-        //splashArt.setImage(myImg);
-        
+        //splashArt.setImage(myImg);  
     }
     public ImageIcon getSkillOrder() {
         return skillOrder;
@@ -88,26 +87,19 @@ private ImageIcon r;
     public ImageIcon getW() {
         return w;
     }
-
     public void setW() {
        w = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "W.png");
     }
-
     public ImageIcon getE() {
         return e;
     }
-
     public void setE() {
         e = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "E.png");
     }
-
     public ImageIcon getR() {
         return r;
     }
-
     public void setR() {
         r = new ImageIcon("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/Champion Abilities/" + name + "R.png");
     }
-    
-   
 }

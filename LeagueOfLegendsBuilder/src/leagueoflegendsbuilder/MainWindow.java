@@ -33,15 +33,15 @@ public class MainWindow extends javax.swing.JFrame {
                 + " Gangplank Garen Gnar Hecarim Heimerdinger Illaoi"
                 + " Irelia Jax Jayce Kalista"
                 + " Kayle Kennen Kled"
-                + " Lucian Malphite"
+                + " Malphite"
                 + " Maokai Mordekaiser"
-                + " Nasus Olaf Ornn Pantheon"
+                + " Nasus Ornn Pantheon"
                 + " Poppy Quinn Renekton Rengar Riven Rumble"
-                + " Ryze Sett Shen Shyvana Singed Sion"
+                + " Ryze Sett Shen Singed Sion"
                 + " Sylas Teemo"
                 + " Trundle Tryndamere Urgot"
-                + " Vayne Vladimir Volibear Wukong"
-                + " Yasuo Yorick Zac";
+                + " Vladimir Volibear Wukong"
+                + " Yasuo Yorick";
     private TreeMap <String, Champion> champs;
     public MainWindow() throws IOException {
         
@@ -88,6 +88,7 @@ public class MainWindow extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         ListOfChampions = new javax.swing.JComboBox();
         IndividualInfoPanel = new javax.swing.JPanel();
         OListOfChampions = new javax.swing.JComboBox();
@@ -153,7 +154,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("                                                                                                          Basic Info                                                                                                                     ", jPanel7);
+        jTabbedPane3.addTab("                                                                                                                                    Basic Info                                                                                                                                              ", jPanel7);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -182,10 +183,17 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("jButton3");
+        jButton3.setText("E Skill Info");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("R Skill Info");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -203,19 +211,18 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(ListOfChamp, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(101, Short.MAX_VALUE))
             .addGroup(IndividualInfoPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(IndividualInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SkillOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(IndividualInfoPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(IndividualInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SkillOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(IndividualInfoPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1))
         );
@@ -233,9 +240,10 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(36, 36, 36)
                         .addGroup(IndividualInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -267,7 +275,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(ListOfChampions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(943, Short.MAX_VALUE))
+                .addContainerGap(925, Short.MAX_VALUE))
             .addGroup(TeamCompBigBoiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(TeamCompBigBoiPanelLayout.createSequentialGroup()
                     .addContainerGap()
@@ -286,7 +294,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(TeamCompBigBoiPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("                                              Your Information                                            ", TeamCompPanel);
+        jTabbedPane1.addTab("                                                        Your Information                                                      ", TeamCompPanel);
 
         OListOfChampions.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -388,7 +396,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(OSkillOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("                                   Opponent Inforamtion                                         ", IndividualInfoPanel);
+        jTabbedPane1.addTab("                                             Opponent Inforamtion                                                  ", IndividualInfoPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -417,6 +425,9 @@ public class MainWindow extends javax.swing.JFrame {
         if(selChamp != null){
             OChampPicture.setIcon(selChamp.getSplashArt());
             OSkillOrder.setIcon(selChamp.getSkillOrder());
+            OBuild.setIcon(selChamp.getBuild());
+            ORunes.setIcon(selChamp.getRunes());
+            //SkillDis.setIcon(new ImageIcon ("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/NoChamp.PNG"));
         }
         else{
             OChampPicture.setIcon(new ImageIcon ("C:/Users/jghoo/Documents/GitHub/LeagueBuilds/LeagueOfLegendsBuilder/src/leagueoflegendsbuilder/ChampionSA/NoChamp.PNG"));
@@ -456,8 +467,16 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        String selectedChamp = (String)ListOfChampions.getSelectedItem();
+        Champion selChamp = champs.get(selectedChamp);
+        SkillDis.setIcon(selChamp.getE());
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String selectedChamp = (String)ListOfChampions.getSelectedItem();
+        Champion selChamp = champs.get(selectedChamp);
+        SkillDis.setIcon(selChamp.getR());
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -544,6 +563,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
